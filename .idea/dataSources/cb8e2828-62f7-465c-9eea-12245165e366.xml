@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="dbms">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="acc"/>
+    <schema id="4" parent="1" name="gfapi"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="judgment"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="naganoblog"/>
+    <schema id="9" parent="1" name="nautilus"/>
+    <schema id="10" parent="1" name="nodeblog"/>
+    <schema id="11" parent="1" name="pekerjaan"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="theblog"/>
+    <schema id="14" parent="1" name="wkwkwk"/>
+  </database-model>
+</dataSource>
