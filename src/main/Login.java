@@ -25,7 +25,7 @@ public class Login extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        Parent root = FXMLLoader.load(getClass().getResource("../scene/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/scene/Login.fxml"));
 
 
 

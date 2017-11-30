@@ -8,84 +8,97 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f7f7fa; -fx-border-radius: 40;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="homebox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgba(0, 100, 100, 0.5); -fx-border-radius: 1000; -fx-background-radius: 1000;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.homeController">
    <children>
-      <Pane prefHeight="720.0" prefWidth="336.0" style="-fx-background-color: #f3f3f6;">
+      <Pane prefHeight="720.0" prefWidth="336.0" style="-fx-background-color: #f3f3f6; -fx-background-radius: 20 0 0 20; fx-border-radius: 20 0 0 20;">
          <children>
-            <Label layoutX="50.0" layoutY="61.0" text="Favorites">
+            <Label layoutX="46.0" layoutY="68.0" text="Favorites" textFill="#757575">
                <font>
-                  <Font name="HelveticaNeue Light" size="20.0" />
+                  <Font name="Helvetica Neue Medium" size="16.0" />
                </font>
             </Label>
-            <Button alignment="BASELINE_LEFT" layoutX="50.0" layoutY="110.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: f3f3f6; -fx-background-radius: 15;" text="Home">
+            <Button fx:id="favHome" alignment="BASELINE_LEFT" layoutX="37.0" layoutY="100.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="66.0" style="-fx-background-color: f3f3f6; -fx-background-radius: 15;" text="Home">
                <font>
-                  <Font name="HelveticaNeue Light" size="15.0" />
+                  <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutX="50.0" layoutY="172.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: f3f3f6; -fx-background-radius: 15;" text="About">
+            <Button fx:id="favAbout" alignment="BASELINE_LEFT" layoutX="37.0" layoutY="140.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="66.0" style="-fx-background-color: f3f3f6; -fx-background-radius: 15;" text="About">
                <font>
-                  <Font name="HelveticaNeue Light" size="15.0" />
+                  <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutX="50.0" layoutY="237.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: f3f3f6; -fx-background-radius: 15;" text="Settings">
+            <Button fx:id="favSettings" alignment="BASELINE_LEFT" layoutX="37.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="87.0" style="-fx-background-color: f3f3f6; -fx-background-radius: 15;" text="Settings">
                <font>
-                  <Font name="HelveticaNeue Light" size="15.0" />
+                  <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
          </children></Pane>
-      <Pane prefHeight="720.0" prefWidth="1087.0">
+      <Pane prefHeight="720.0" prefWidth="1087.0" style="-fx-background-radius: 0 20 20 0; fx-border-radius: 0 20 20 0; -fx-background-color: #EEEEEE;">
          <children>
-            <Label layoutX="121.0" layoutY="68.0" text="Users" />
-            <Label layoutX="121.0" layoutY="89.0" prefHeight="36.0" prefWidth="118.0" text="Rakha" textFill="#212121">
+            <Label layoutX="121.0" layoutY="68.0" text="Users" textFill="#757575">
                <font>
-                  <Font name="System Bold" size="35.0" />
+                  <Font name="Helvetica Neue" size="13.0" />
+               </font></Label>
+            <Label fx:id="home_name" layoutX="121.0" layoutY="89.0" prefHeight="43.0" prefWidth="824.0" text="Rakha" textFill="#212121">
+               <font>
+                  <Font name="Helvetica Neue Medium" size="35.0" />
                </font>
             </Label>
-            <Pane layoutX="426.0" layoutY="191.0" prefHeight="60.0" prefWidth="224.0" style="-fx-background-color: #fff;">
+            <Pane fx:id="invButton" layoutX="426.0" layoutY="191.0" prefHeight="60.0" prefWidth="224.0" style="-fx-background-color: #fff; -fx-background-radius: 7;">
                <children>
-                  <Pane prefHeight="60.0" prefWidth="7.0" style="-fx-background-color: red;" />
-                  <Label layoutX="25.0" layoutY="15.0" prefHeight="30.0" prefWidth="79.0" text="Inventory">
+                  <Pane prefHeight="60.0" prefWidth="7.0" style="-fx-background-color: red; -fx-background-radius: 7 0 0 7;" />
+                  <Label layoutX="25.0" layoutY="15.0" prefHeight="30.0" prefWidth="186.0" text="Inventory">
                      <font>
-                        <Font name="HelveticaNeue Light" size="20.0" />
+                        <Font name="Helvetica Neue" size="15.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="121.0" layoutY="191.0" prefHeight="60.0" prefWidth="224.0" style="-fx-background-color: #fff;">
+            <Pane fx:id="salesButton" layoutX="121.0" layoutY="191.0" prefHeight="60.0" prefWidth="224.0" style="-fx-background-color: #fff; -fx-background-radius: 7; -fx-cursor: hand;">
                <children>
                   <Label layoutX="33.0" layoutY="15.0" prefHeight="30.0" prefWidth="79.0" text="Sales">
                      <font>
-                        <Font name="HelveticaNeue Light" size="20.0" />
+                        <Font name="Helvetica Neue" size="15.0" />
                      </font>
                   </Label>
-                  <Pane prefHeight="60.0" prefWidth="7.0" style="-fx-background-color: #9C27B0;" />
+                  <Pane prefHeight="60.0" prefWidth="7.0" style="-fx-background-color: #9C27B0; -fx-background-radius: 7 0 0 7;" />
                </children>
             </Pane>
-            <ImageView fitHeight="159.0" fitWidth="224.0" layoutX="121.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Pictures/New%20folder/LINE/1443336839404.jpg" />
-               </image>
-            </ImageView>
-            <Pane layoutX="727.0" layoutY="191.0" prefHeight="60.0" prefWidth="224.0" style="-fx-background-color: #fff;">
+            <Pane layoutX="721.0" layoutY="191.0" prefHeight="60.0" prefWidth="224.0" style="-fx-background-color: #fff; -fx-background-radius: 7;">
                <children>
-                  <Pane prefHeight="60.0" prefWidth="7.0" style="-fx-background-color: #EF6C00;" />
+                  <Pane prefHeight="60.0" prefWidth="7.0" style="-fx-background-color: #EF6C00; -fx-background-radius: 7 0 0 7;" />
                   <Label layoutX="26.0" layoutY="15.0" prefHeight="30.0" prefWidth="79.0" text="Admin">
                      <font>
-                        <Font name="HelveticaNeue Light" size="20.0" />
+                        <Font name="Helvetica Neue" size="15.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="121.0" layoutY="300.0" prefHeight="60.0" prefWidth="224.0" style="-fx-background-color: #fff;">
+            <Pane fx:id="inventoryButton" layoutX="426.0" layoutY="300.0" prefHeight="60.0" prefWidth="224.0" style="-fx-background-color: #fff; -fx-background-radius: 7; -fx-cursor: hand;">
                <children>
-                  <Pane prefHeight="60.0" prefWidth="7.0" style="-fx-background-color: #1565C0;" />
-                  <Label layoutX="25.0" layoutY="15.0" prefHeight="30.0" prefWidth="79.0" text="Update">
+                  <Pane prefHeight="60.0" prefWidth="7.0" style="-fx-background-color: #EF6C00; -fx-background-radius: 7 0 0 7;" />
+                  <Label layoutX="26.0" layoutY="15.0" prefHeight="30.0" prefWidth="79.0" text="Category">
                      <font>
-                        <Font name="HelveticaNeue Light" size="20.0" />
+                        <Font name="Helvetica Neue" size="15.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
+            <ImageView fitHeight="214.0" fitWidth="224.0" layoutX="121.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 7;">
+               <image>
+                  <Image url="@../assets/home.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="todayDate" layoutX="138.0" layoutY="315.0" prefHeight="30.0" prefWidth="186.0" text="Hari Sekarang" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue Medium" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="todayJam" layoutX="140.0" layoutY="474.0" prefHeight="30.0" prefWidth="186.0" text="Hari Sekarang" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
